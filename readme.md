@@ -48,9 +48,11 @@ _NOTE: Even if you have installed a database and done a million database drills,
 - [ ] knex seed:make game
 - [ ] git commit
 
-## Now All Files Are Set Up To Begin Crushing Some Code!
+## Now All Files Are Set Up To Begin Crushing Some Code
 
-### Knex Migration File
+### Files to edit
+
+_Sorry. The following checklist includes hints only_
 
 - [ ] Edit database-connection.js with proper port
 - [ ] Edit knex up/down in the migrations file
