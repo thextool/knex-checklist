@@ -1,5 +1,9 @@
 # Knex Checklist
 
+_NOTE: This is specifically for the Galvanize Knex Drills. If you haven't done so already, please visit the link below to fork and clone the Knex drill repo (galvanize-memory) before you begin_
+
+[Galvanize Memory](https://github.com/gSchool/galvanize-memory)
+
 ## If You Have Not Installed a Database Language
 
 ### 1: Install on Mac with Homebrew with one of the following database options
@@ -28,7 +32,7 @@ _NOTE: Even if you have installed a database and done a million database drills,
 - [ ] Create Heroku Dyno
 - [ ] Link to Heroku Dyno
 - [ ] Set Heroku buildpack to nodejs
-- [ ] npm install, PLUS:
+- [ ] npm install
 - [ ] npm install pg
 - [ ] npm install knex
 - [ ] npm install cors
@@ -48,4 +52,6 @@ _NOTE: Even if you have installed a database and done a million database drills,
 
 ### Knex Migration File
 
-- [ ]
+- [ ] Edit database-connection.js with proper port
+- [ ] Edit knex up/down in the migrations file
+- [ ] Add data from drill README.md to the seed file
