@@ -25,6 +25,9 @@ _NOTE: Even if you have installed a database and done a million database drills,
 - [ ] Create new directory outside the cloned Knex repo
 - [ ] Copy repo drill files into new directory (using cp -r)
 - [ ] git init
+- [ ] express --git . (creates a git ignore. If you don't have this already type $ npm install -g express generator)
+- [ ] you will only need to do npm install and can skip down to 
+- [ ] npm start
 - [ ] touch .gitignore
 - [ ] npm init
 - [ ] Create GitHub repo
@@ -44,8 +47,8 @@ _NOTE: Even if you have installed a database and done a million database drills,
 - [ ] Add knex and start scripts to package.json
 - [ ] knex init
 - [ ] Update client and connection in knexfile.js
-- [ ] knex migrate:make game
-- [ ] knex seed:make game
+- [ ] knex migrate:make [choose a name]
+- [ ] knex seed:make [choose a name]
 - [ ] git commit
 
 ## Now All Files Are Set Up To Begin Crushing Some Code
