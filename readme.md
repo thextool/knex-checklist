@@ -29,13 +29,13 @@ _NOTE: Even if you have installed a database and done a million database drills,
 - [ ] you will only need to do npm install and can skip down to 
 - [ ] npm start
 - [ ] touch .gitignore
-- [ ] npm init
+- [ ] npm init -y (this creates a package.json file)
 - [ ] Create GitHub repo
 - [ ] Link to GitHub repo
 - [ ] Create Heroku Dyno
-- [ ] Link to Heroku Dyno
-- [ ] Set Heroku buildpack to nodejs
-- [ ] npm install
+- [ ] Set Heroku buildpack to nodejs. this is under settings
+- [ ] Link to Heroku Dyno. on deploy page copy paste the url at the bottom to my local repo.
+- [ ] npm install - if dependencies aren't already there do the following. 
 - [ ] npm install pg
 - [ ] npm install knex
 - [ ] npm install cors
@@ -46,10 +46,35 @@ _NOTE: Even if you have installed a database and done a million database drills,
 - [ ] psql 'dbname' (check database has been created)
 - [ ] Add knex and start scripts to package.json
 - [ ] knex init
-- [ ] Update client and connection in knexfile.js
+- [ ] Update client and connection in knexfile.js for development client use
+      client: 'pg',
+      connection:'postgres://localhost:/[database name]'
+- [ ] for production use (this is telling heroku what database to use in produciton
+      client: 'pg',
+      connection: process.env.DATABASE_URL
 - [ ] knex migrate:make [choose a name]
 - [ ] knex seed:make [choose a name]
 - [ ] git commit
+- [ ] in the knexfile.js write the schemas to create the table and it's colums. looks something like this 
+      ```return knex.schema.createTable('resolutions', (table) => {
+        table.increments('id')
+        table.date('dueDate').notNullable()
+        table.text('resolution').notNullable()```
+    })
+ - [ ] $ knex migrate:latest - this will create the table and the columns. 
+ - [ ] you can check and see if it worked by psql [dbname] 
+ - [ ] \dt describe table 
+ - [ ] \d [table name]
+ - [ ] leave the db with \q
+ - [ ] heroku addons:create heroku-postgresql
+ - [ ] git add commit push
+ - [ ] git push heroku master
+ - [ ] heroku run knex migrate:latest
+ 
+
+
+
+
 
 ## Now All Files Are Set Up To Begin Crushing Some Code
 
