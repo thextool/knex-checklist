@@ -53,7 +53,7 @@ _NOTE: Even if you have installed a database and done a million database drills,
       client: 'pg',
       connection: process.env.DATABASE_URL
 - [ ] knex migrate:make [choose a name]
-- [ ] knex seed:make [choose a name]
+- [ ] knex seed:make [choose a name] always put numbers in front of your seed because that will be the order they run. 00, 01, 02
 - [ ] git commit
 - [ ] in the knexfile.js write the schemas to create the table and it's colums. looks something like this 
       ```return knex.schema.createTable('resolutions', (table) => {
@@ -66,10 +66,22 @@ _NOTE: Even if you have installed a database and done a million database drills,
  - [ ] \dt describe table 
  - [ ] \d [table name]
  - [ ] leave the db with \q
- - [ ] heroku addons:create heroku-postgresql
+ - [ ] $ heroku addons:create heroku-postgresql (this will add postgresql to heroku app)
  - [ ] git add commit push
  - [ ] git push heroku master
- - [ ] heroku run knex migrate:latest
+ - [ ] $ heroku run knex migrate:latest (this will run the migration on your deployed heroku app)
+ - [ ] $ heroku pg:psql (check to see the database tables on the deployed heroku app)
+ - [ ] add the seed data to the seed file
+ - [ ] knex seed:run (this seeds the local database
+ - [ ] psql [db name] 
+ - [ ] talbe [table name]; (thes ; is important. this will make sure the table got seeded.)
+ - [ ] commit push and add to heroku. 
+ - [ ] $ heroku run knex seed:run (this runs it on the deployed app)
+ - [ ] heroku pg:psql
+ - [ ] table [table name]; (see the seeded data on the deployed side.)
+ - [ ] write the routes and queries. test in postman. 
+ 
+ 
  
 
 
