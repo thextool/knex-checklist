@@ -26,7 +26,7 @@ _NOTE: Even if you have installed a database and done a million database drills,
 - [ ] Copy repo drill files into new directory (using cp -r)
 - [ ] git init
 - [ ] express --git . (creates a git ignore. If you don't have this already type $ npm install -g express generator)
-- [ ] you will only need to do npm install and can skip down to 
+- [ ] you will only need to do npm install and can skip down to git commit
 - [ ] npm start
 - [ ] touch .gitignore
 - [ ] npm init -y (this creates a package.json file)
